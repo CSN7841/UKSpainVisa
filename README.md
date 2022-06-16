@@ -35,7 +35,7 @@ CSN7841/UKSpainVisa是一个开源的刷slot的python脚本。
 
 ### IV. Run for your Visa!
 
-1. 安装Python，请参考vxwong的内容。
+1. 安装Python，请参考vxwong的内容。然后将你的chrome浏览器升级到最新版，这个十分重要！
 
 #### 注意如果需要再linux下运行需要自行修改代码，手动配置浏览器和driver的路径:
 ```python
