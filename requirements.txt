@@ -1,0 +1,5 @@
+selenium~=4.2.0
+webdriver-manager
+pyttsx3~=2.90
+threadpool~=1.3.2
+undetected_chromedriver
