@@ -5,7 +5,7 @@ from utils.config import TIMEOUT
 from utils.config import USERS
 from utils.log import logger
 from visa import Visa
-import undetected_chromedriver as uc
+# import undetected_chromedriver as uc
 import threadpool
 import pyttsx3
 
@@ -19,7 +19,7 @@ def init_driver():
     chrome_options.add_experimental_option('prefs', profile)
     chrome_options.add_argument("--incognito")
 
-    driver = uc.Chrome(chrome_options=chrome_options)
+#     driver = uc.Chrome(chrome_options=chrome_options)
     driver.implicitly_wait(10)
     driver.delete_all_cookies()
     return driver
