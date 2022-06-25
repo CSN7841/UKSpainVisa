@@ -56,25 +56,25 @@ class Visa(Basic):
     def check_available_dates(self, mode, category, email):
         self.click_el(id="VisaTypeId")
         self.click_el(xpath="//select[@id='VisaTypeId']/option[contains(text(),'{}')]".format(category))
-        self.wait_for_secs(1)
+        self.wait_for_secs()
 
         # 勾选模式
         sms = self.driver.find_element_by_id("vasId12")
         if not sms.is_selected() and mode[0] == 'Yes':
             sms.click()
-            self.wait_for_secs(1)
+            self.wait_for_secs()
         photo = self.driver.find_element_by_id("vasId5")
         if not photo.is_selected() and mode[1] == 'Yes':
             photo.click()
-            self.wait_for_secs(1)
+            self.wait_for_secs()
         premium = self.driver.find_element_by_id("vasId1")
         if not premium.is_selected() and mode[2] == 'Yes':
             premium.click()
-            self.wait_for_secs(1)
+            self.wait_for_secs()
         courier = self.driver.find_element_by_id("courierId")
         if not courier.is_selected() and mode[3] == 'Yes':
             courier.click()
-            self.wait_for_secs(1)
+            self.wait_for_secs()
 
         # check date
         self.click_el(id="app_date")
@@ -85,7 +85,7 @@ class Visa(Basic):
             if nd:
                 available_dates.update(nd)
             if self.driver.find_elements_by_xpath(next_button_xpath):
-                self.wait_for_secs(1)
+                self.wait_for_secs()
                 self.click_el(xpath=next_button_xpath)
             else:
                 break
@@ -113,13 +113,13 @@ class Visa(Basic):
             # 选择日期，最晚的那个
             select_el = self.driver.find_element_by_id("app_time")
             select_el.click()
-            self.wait_for_secs(1)
+            self.wait_for_secs()
             select = Select(select_el)
             select.select_by_index(len(select.options)-1)
             logger.info(f" User {email} 's time selected !")
 
             # 点击确认
-            self.wait_for_secs(1)
+            self.wait_for_secs()
             confirm = self.driver.find_element_by_name("bookDate")
             confirm.click()
             logger.info(f"User {email} finished !")
