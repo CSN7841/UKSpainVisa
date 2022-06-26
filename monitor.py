@@ -19,7 +19,7 @@ def init_driver():
     chrome_options.add_experimental_option('prefs', profile)
     chrome_options.add_argument("--incognito")
 
-#     driver = uc.Chrome(chrome_options=chrome_options)
+#     driver = uc.Chrome(options=chrome_options)
     driver.implicitly_wait(10)
     driver.delete_all_cookies()
     return driver
