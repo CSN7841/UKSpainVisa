@@ -26,7 +26,7 @@ def init_driver():
 
 
 def monitor(users):
-    email, password, centers, mode, date = users
+    email, password, centers, mode = users
     driver = init_driver()
     visa = Visa(driver)
     try:
