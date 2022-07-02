@@ -1,4 +1,9 @@
 # UKSpainVisa
+
+### 更新
+取消多线程None参数
+日期的过滤解决了，但是没有放在这里
+
 ### I. Introduction
 CSN7841/UKSpainVisa是一个开源的刷slot的python脚本。
 
@@ -65,9 +70,9 @@ FIXED = 'https://uk.blsspainvisa.com/visa4spain/book-appointment/'
 
 # ======================= USER LIST =======================
 # 这里添加客户
-# 账号参数: Email, 密码, 链接地址, 中心地点(CENTER_MAN, CENTER_EDN, CENTER_LON), 是否优先(MODE_NORMAL, MODE_FAST), None是启动线程池的默认参数
-No1 = (['yourEmail@xxx.com', '@password@', 'X6Wnq5mw23', CENTER_MAN, MODE_FAST], None) # None 必须保留线程池参数
-No2 = (['secondPersonEmail@xxx.com', '@password@', 'X6Wnq5ms5f', CENTER_EDN, MODE_NORMAL], None)
+# 账号参数: Email, 密码, 链接地址, 中心地点(CENTER_MAN, CENTER_EDN, CENTER_LON), 是否优先(MODE_NORMAL, MODE_FAST)
+No1 = (['yourEmail@xxx.com', '@password@', 'X6Wnq5mw23', CENTER_MAN, MODE_FAST])
+No2 = (['secondPersonEmail@xxx.com', '@password@', 'X6Wnq5ms5f', CENTER_EDN, MODE_NORMAL])
 # 加入线程池，就算前面配置了账号，不加入这里面也没用，USERS就是要在主程序中调用的线程池
 USERS = [No1, No2] # ！！！！
 ```

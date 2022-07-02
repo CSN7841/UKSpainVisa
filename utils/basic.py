@@ -8,7 +8,6 @@ class Basic:
         self.driver = driver
 
     def click_el(self, xpath=None, id=None, name=None, text=None):
-        locator = None
         if xpath:
             locator = (By.XPATH, xpath)
         elif id:

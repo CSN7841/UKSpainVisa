@@ -19,23 +19,25 @@ def init_driver():
     chrome_options.add_experimental_option('prefs', profile)
     chrome_options.add_argument("--incognito")
 
-    driver = uc.Chrome(chrome_options=chrome_options)
+    driver = uc.Chrome(options=chrome_options)
     driver.implicitly_wait(10)
     driver.delete_all_cookies()
     return driver
 
 
-def monitor(email, password, url, centers, mode):
-
+def monitor(users):
+    email, password, centers, mode, date = users
     driver = init_driver()
     visa = Visa(driver)
     try:
         time.sleep(1)
-        visa.go_to_appointment_page(url)
+        visa.go_to_appointment_page()
         time.sleep(1)
         visa.login(email, password)
+        if visa.check_finished(email) == 0:
+            return
         time.sleep(1)
-        visa.go_to_book_appointment(url, email)
+        visa.go_to_book_appointment(email)
         visa.select_centre(centers[0], centers[1], centers[2], email)
         while True:
             dates = visa.check_available_dates(mode, centers[3], email)
@@ -52,7 +54,7 @@ def monitor(email, password, url, centers, mode):
     except Exception as e:
         logger.error(f'Monitor runtime error from {email} {e}')
         driver.quit()
-        monitor(email, password, url, centers, mode)
+        monitor(users)
 
 
 if __name__ == "__main__":

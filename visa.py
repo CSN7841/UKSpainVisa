@@ -28,8 +28,10 @@ class Visa(Basic):
         self.click_el(name='checkDate')
         logger.info(f"User {email} select centre finished !")
 
-    def go_to_appointment_page(self, url):
-        self.open_page(config.FIXED + url)
+    def go_to_appointment_page(self):
+        self.wait_for_secs()
+        self.open_page(config.FIXED)
+        self.wait_for_loading()
 
     def login(self, email, password):
         try:
@@ -45,9 +47,9 @@ class Visa(Basic):
         except Exception as e:
             logger.error(e)
 
-    def go_to_book_appointment(self, url, email):
-        unique_suffix = url.split('/')[-1]
-        link = f'book-appointment/{unique_suffix}'
+    def go_to_book_appointment(self, email):
+        self.wait_for_loading()
+        link = self.driver.current_url.split('/')[-1]
         element = self.driver.find_element_by_xpath("//a[contains(text(),'Book Appointment')]")
         element.click()
         logger.info(f"User {email} date appointment link = [{link}]")
@@ -92,6 +94,15 @@ class Visa(Basic):
 
         return available_dates
 
+    def check_finished(self, email):
+        self.wait_for_secs(3)
+        if not self.driver.find_element_by_xpath("//*[contains(text(), '{}')]".format("Book Appointment")).is_enabled():
+            logger.warning(f"User {email} has had a visa !!!")
+            return 0
+        else:
+            logger.warning(f"User {email} doesn't have a visa !!!")
+            return 1
+
     def get_normal_dates(self, email):
         normal_dates_xpath = "//div[@class='datepicker-days']//td[not(contains(@class, 'disabled'))]"
         # days in the current month
@@ -115,7 +126,8 @@ class Visa(Basic):
             select_el.click()
             self.wait_for_secs(1)
             select = Select(select_el)
-            select.select_by_index(len(select.options)-1)
+            # 在这里调第几个时间
+            select.select_by_index(-1)
             logger.info(f" User {email} 's time selected !")
 
             # 点击确认
