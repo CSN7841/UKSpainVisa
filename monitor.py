@@ -20,13 +20,13 @@ def init_driver():
     chrome_options.add_argument("--incognito")
 
     driver = uc.Chrome(options=chrome_options)
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(1)
     driver.delete_all_cookies()
     return driver
 
 
-def monitor(users):
-    email, password, centers, mode = users
+def monitor(user):
+    email, password, centers, mode = user
     driver = init_driver()
     visa = Visa(driver)
     try:
@@ -43,22 +43,22 @@ def monitor(users):
             dates = visa.check_available_dates(mode, centers[3], email)
             if dates:
                 logger.info(f"USER {email} DAY AVAILABLE: {dates}")
-                pyttsx3.speak(f"say day available {email} {dates}")
-                time.sleep(10)
-                # 10s 后继续进入下一个循环
+                pyttsx3.speak(f"day available {email} {dates}")
+                # 120s 后继续进入下一个循环
+                time.sleep(120)
             else:
                 logger.info(f"{email}: NO DAY AVAILABLE...")
-                driver.refresh()
                 time.sleep(TIMEOUT)
+                driver.refresh()
 
     except Exception as e:
         logger.error(f'Monitor runtime error from {email} {e}')
         driver.quit()
-        monitor(users)
+        monitor(user)
 
 
 if __name__ == "__main__":
-
+    pyttsx3.speak("Notification Test OK")
     # 执行部分
     pool = threadpool.ThreadPool(len(USERS))
     gl_tasks = threadpool.makeRequests(monitor, USERS)
