@@ -2,19 +2,16 @@
 TIMEOUT = 90  # 无日期后刷新间隔
 
 # =============== VISA CENTER SELECTION ===============
-CENTER_MAN = ('England', 'Manchester', 'Normal', 'Tourism')
+CENTER_MAN = ('England', 'Manchester', 'Normal', 'Tourism')  # 请注意，曼城递签SMS和Courier是必选的
 CENTER_EDN = ('Scotland', 'Edinburgh', 'Normal', 'Tourism')
 CENTER_LON = ('Bristol', 'London', 'Normal', 'Tourist')
 
 # ======================= MODE =========================
 # 日期选择页面的4个勾勾，从上到下的顺序，可以自己选择
-# 不使用加急
+# 不使用Premium Lounge
 MODE_NORMAL = ('Yes', 'Yes', 'No', 'Yes')
-# 使用加急
+# 使用Premium Lounge
 MODE_FAST = ('Yes', 'Yes', 'Yes', 'Yes')
-
-# =============== PERSONAL CONFIG FOR VISA ===============
-FIXED = 'https://uk.blsspainvisa.com/visa4spain/book-appointment/'
 
 # ======================= USER LIST =======================
 # 这里添加客户

@@ -30,7 +30,7 @@ class Visa(Basic):
 
     def go_to_appointment_page(self):
         self.wait_for_secs()
-        self.open_page(config.FIXED)
+        self.open_page('https://uk.blsspainvisa.com/visa4spain/book-appointment/')
         self.wait_for_loading()
 
     def login(self, email, password):
@@ -97,10 +97,10 @@ class Visa(Basic):
     def check_finished(self, email):
         self.wait_for_secs(3)
         if not self.driver.find_element_by_xpath("//*[contains(text(), '{}')]".format("Book Appointment")).is_enabled():
-            logger.warning(f"User {email} has had a visa !!!")
+            logger.warning(f"User {email} has had an appointment !!!")
             return 0
         else:
-            logger.warning(f"User {email} doesn't have a visa !!!")
+            logger.warning(f"User {email} doesn't have an appointment !!!")
             return 1
 
     def get_normal_dates(self, email):
@@ -126,7 +126,7 @@ class Visa(Basic):
             select_el.click()
             self.wait_for_secs()
             select = Select(select_el)
-            # 在这里调第几个时间
+            # 在这里调第几个时间。-1代表最后一个，0代表第一个
             select.select_by_index(-1)
             logger.info(f" User {email} 's time selected !")
 
