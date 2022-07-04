@@ -1,5 +1,11 @@
 # UKSpainVisa
 
+## 警告：使用反爬虫技术绕过Cloudflare在英国是违法的！本项目仅供技术交流，对所有可能发生的任何法律问题全部与项目作者和贡献者无关，使用者需要自行完全承担任何相关的责任。下载或克隆本代码即代表同意本条款。若不同意请关闭本页面，谢谢！
+
+
+## Warning: Using anti-crawling techniques to bypass Cloudflare is illegal in the UK! This project is only for technical exchange, and any legal issues that may occur have nothing to do with the project authors and contributors, and users need to fully assume any related responsibilities. By downloading or cloning this code, you agree to these terms. If you do not agree, please close this page, thank you!
+
+
 ### 更新
 取消多线程None参数
 
