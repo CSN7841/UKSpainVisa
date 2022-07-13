@@ -1,0 +1,28 @@
+2022-06-14 02:26:06,476 [visa.py:49] INFO - log in finished
+2022-06-14 02:26:12,114 [monitor.py:51] ERROR - Monitor runtime error. 'NoneType' object has no attribute 'click'
+2022-06-14 08:51:38,922 [visa.py:43] INFO - User 987699298@qq.com log in finished !
+2022-06-14 08:51:39,125 [visa.py:52] INFO - User 987699298@qq.com date appointment link = [book-appointment/X6Wnq5mhgw]
+2022-06-14 08:51:39,125 [visa.py:53] INFO - User 987699298@qq.com go to book appointment finished !
+2022-06-14 08:51:39,740 [visa.py:43] INFO - User 987699298@qq.com log in finished !
+2022-06-14 08:51:39,929 [visa.py:52] INFO - User 987699298@qq.com date appointment link = [book-appointment/X6Wnq5mhgw]
+2022-06-14 08:51:39,929 [visa.py:53] INFO - User 987699298@qq.com go to book appointment finished !
+2022-06-14 08:51:47,249 [visa.py:28] INFO - User 987699298@qq.com select centre finished !
+2022-06-14 08:51:49,817 [visa.py:28] INFO - User 987699298@qq.com select centre finished !
+2022-06-14 08:51:56,081 [monitor.py:52] ERROR - Monitor runtime error from 987699298@qq.com ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2022-06-14 08:51:56,081 [monitor.py:52] ERROR - Monitor runtime error from 987699298@qq.com ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2022-06-14 08:56:00,473 [visa.py:43] INFO - User 987699298@qq.com log in finished !
+2022-06-14 08:56:00,660 [visa.py:52] INFO - User 987699298@qq.com date appointment link = [book-appointment/X6Wnq5mhgw]
+2022-06-14 08:56:00,660 [visa.py:53] INFO - User 987699298@qq.com go to book appointment finished !
+2022-06-14 08:56:01,020 [visa.py:43] INFO - User 987699298@qq.com log in finished !
+2022-06-14 08:56:01,262 [visa.py:52] INFO - User 987699298@qq.com date appointment link = [book-appointment/X6Wnq5mhgw]
+2022-06-14 08:56:01,262 [visa.py:53] INFO - User 987699298@qq.com go to book appointment finished !
+2022-06-14 08:56:08,380 [visa.py:28] INFO - User 987699298@qq.com select centre finished !
+2022-06-14 08:56:12,102 [visa.py:28] INFO - User 987699298@qq.com select centre finished !
+2022-06-14 09:04:09,921 [visa.py:43] INFO - User 987699298@qq.com log in finished !
+2022-06-14 09:04:10,101 [visa.py:52] INFO - User 987699298@qq.com date appointment link = [book-appointment/X6Wnq5mhgw]
+2022-06-14 09:04:10,101 [visa.py:53] INFO - User 987699298@qq.com go to book appointment finished !
+2022-06-14 09:04:10,548 [visa.py:43] INFO - User 987699298@qq.com log in finished !
+2022-06-14 09:04:10,770 [visa.py:52] INFO - User 987699298@qq.com date appointment link = [book-appointment/X6Wnq5mhgw]
+2022-06-14 09:04:10,770 [visa.py:53] INFO - User 987699298@qq.com go to book appointment finished !
+2022-06-14 09:04:18,349 [visa.py:28] INFO - User 987699298@qq.com select centre finished !
+2022-06-14 09:04:19,628 [visa.py:28] INFO - User 987699298@qq.com select centre finished !

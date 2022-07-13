@@ -1,0 +1,8 @@
+2022-06-15 04:26:54,796 [visa.py:44] INFO - User yourEmail@xxx.com log in finished !
+2022-06-15 04:26:56,306 [visa.py:44] INFO - User secondPersonEmail@xxx.com log in finished !
+2022-06-15 04:26:57,864 [monitor.py:54] ERROR - Monitor runtime error from secondPersonEmail@xxx.com ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2022-06-15 04:26:57,864 [monitor.py:54] ERROR - Monitor runtime error from yourEmail@xxx.com ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2022-06-15 07:52:34,071 [visa.py:44] INFO - User yourEmail@xxx.com log in finished !
+2022-06-15 07:52:40,935 [visa.py:44] INFO - User secondPersonEmail@xxx.com log in finished !
+2022-06-15 07:52:42,809 [monitor.py:53] ERROR - Monitor runtime error from secondPersonEmail@xxx.com ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2022-06-15 07:52:42,810 [monitor.py:53] ERROR - Monitor runtime error from yourEmail@xxx.com ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
